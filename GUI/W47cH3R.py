@@ -87,7 +87,8 @@ def packet_filter (packet):
     operation = packet.sprintf("%ARP.op%")
     if source == local_ip:
         requests.append(dest)
-    if (operation == 'who-has') and (not source_mac in notification_issued) and (source != '0.0.0.0' ) and (source_mac != '00:04:96:6c:f7:7e') and (source != '169.254.166.147'):
+    if (operation == 'who-has') and (not source_mac in notification_issued) and (source != '0.0.0.0' ) and (source != '169.254.166.147'):
+       print(source_mac)
        return check_spoof (source, source_mac, dest)
 class MyFirstGUI(threading.Thread): #creating a threaded gui class
     #init definition
