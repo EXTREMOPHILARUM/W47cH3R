@@ -5,6 +5,9 @@ from sys import platform
 from scapy.all import sniff
 from tkinter import *
 from tkinter import messagebox
+import pandas as pd
+import scapy
+# added 2 useless libraries.
 
 #creating arrays to store data from the sniffed packets
 requests = []
